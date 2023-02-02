@@ -1,4 +1,4 @@
-prompt,input,result
+prompt
 "Do weather contidions require umbrella?
 Conditions: Heavy rain
 Umbrella: Yes
@@ -7,9 +7,4 @@ Umbrella: No
 Conditions: Foggy morning
 Umbrella: No
 Conditions: {input}
-Umbrella: {result}",Raining,Yes
-,Windy,No
-,Showing,Yes
-,Thunderstorms and Lightning,Yes
-,Boiling hot,No
-,It is very dry outside,No
+Umbrella: {result}"
