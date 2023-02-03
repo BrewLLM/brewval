@@ -27,5 +27,7 @@ prompts = parse_prompts(args.prompts)
 labels = parse_labels(args.labels)
 print(f'Loaded {len(prompts)} prompts and {len(labels)} labels. Evaluating...')
 
+evaluator = Evaluator()
+
 for prompt in prompts:
-    Evaluator.evaluate(prompt, labels)
+    evaluator.evaluate(prompt, labels)

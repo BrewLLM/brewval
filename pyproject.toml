@@ -10,3 +10,4 @@ repository = "https://github.com/BrewLLM/brewval"
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
 langchain = "^0.0.76"
+openai = "^0.26.4"
