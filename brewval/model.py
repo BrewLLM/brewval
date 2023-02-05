@@ -20,9 +20,7 @@ class Prompt:
         assert template.endswith('{result}')
         self.template = template
 
-
     def get_prompt_from_label(self, label: Label) -> str:
-
         template = self.template.removesuffix('{result}').strip()
         placeholders = re.findall(r'(?<=\{)\w+(?=\})', template)
         for placeholder in placeholders:
@@ -31,5 +29,8 @@ class Prompt:
         return template
 
 
+class EvaluationResult:
 
-
+    def __init__(self, model_name: str, accuracy: float):
+        self.accuracy = accuracy
+        self.model_name = model_name

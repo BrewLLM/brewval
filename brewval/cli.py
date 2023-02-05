@@ -30,4 +30,6 @@ print(f'Loaded {len(prompts)} prompts and {len(labels)} labels. Evaluating...')
 evaluator = Evaluator()
 
 for prompt in prompts:
-    evaluator.evaluate(prompt, labels)
+    results = evaluator.evaluate(prompt, labels)
+    for result in results:
+        print(f'Model {result.model_name} accuracy: {result.accuracy * 100}%')
