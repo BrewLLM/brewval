@@ -27,7 +27,7 @@ class Evaluator:
             match_count: int = 0
             for label in labels:
                 prompt_text = prompt.get_prompt_from_label(label)
-                output = DEFAULT_MODELS[model].generate([prompt_text])
+                output = self.models[model].generate([prompt_text])
                 result = output.generations[0][0].text
                 matches = label.result_matches(result)
                 if matches:
